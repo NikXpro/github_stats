@@ -68,6 +68,25 @@ curl http://localhost:3000/languages/github_username
 }
 ```
 
+`GET /languages/:username/:repoName`
+Cet endpoint renvoie le nombre total de lignes de code écrites dans différents langages de programmation pour un dépôt GitHub spécifique d'un utilisateur donné.
+
+#### Exemple :
+
+```bash
+curl http://localhost:3000/languages/github_username/repository_name
+```
+
+#### Réponse :
+
+```json
+{
+  "JavaScript": 12345,
+  "Python": 6789,
+  "Java": 1011
+}
+```
+
 ## Gestion du Cache
 
 Le cache est stocké dans un fichier cache.json et est chargé au démarrage du serveur. Lorsqu'une requête est traitée, le cache est mis à jour si nécessaire.
