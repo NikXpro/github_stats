@@ -69,6 +69,7 @@ curl http://localhost:3000/languages/github_username
 ```
 
 `GET /languages/:username/:repoName`
+
 Cet endpoint renvoie le nombre total de lignes de code écrites dans différents langages de programmation pour un dépôt GitHub spécifique d'un utilisateur donné.
 
 #### Exemple :
