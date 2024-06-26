@@ -1,0 +1,4 @@
+{
+  "repos": ["reposName"],
+  "paths": ["node_modules", "dist", "build"]
+}
