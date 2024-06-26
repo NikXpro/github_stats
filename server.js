@@ -25,6 +25,7 @@ let cache = {};
 let blacklist = {
   repos: [],
   paths: [],
+  languages: [],
 };
 
 // Load cache from file on startup
@@ -38,7 +39,11 @@ if (fs.existsSync(CACHE_FILE)) {
 if (fs.existsSync(BLACKLIST_FILE)) {
   try {
     const data = JSON.parse(fs.readFileSync(BLACKLIST_FILE));
-    if (Array.isArray(data.repos) && Array.isArray(data.paths)) {
+    if (
+      Array.isArray(data.repos) &&
+      Array.isArray(data.paths) &&
+      Array.isArray(data.languages)
+    ) {
       blacklist = data;
     } else {
       console.error("Blacklist data is not in the correct format");
@@ -141,6 +146,11 @@ async function countLinesOfCode(username) {
       response.data.forEach((languageData) => {
         const language = languageData.language;
         const lines = languageData.linesOfCode;
+
+        // Ignorer les langages blacklistés
+        if (blacklist.languages.includes(language)) {
+          return;
+        }
 
         languages[language] = (languages[language] || 0) + lines;
 
