@@ -79,7 +79,8 @@ Le fichier blacklist.json permet de spécifier des dépôts ou des chemins à ig
 ```json
 {
   "repos": ["repo_to_ignore"],
-  "paths": ["path_to_ignore/file_to_ignore"]
+  "paths": ["path_to_ignore/file_to_ignore"],
+  "languages": ["language_to_ignore"]
 }
 ```
 
