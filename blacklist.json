@@ -1,4 +1,9 @@
 {
-  "repos": ["reposName"],
-  "paths": ["node_modules", "dist", "build"]
+  "paths": [
+    "node_modules",
+    "dist",
+    "build",
+    "package.json",
+    "package-lock.json"
+  ]
 }
