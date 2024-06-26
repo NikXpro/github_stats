@@ -14,7 +14,7 @@ Pour exécuter ce projet, vous aurez besoin de :
 1. Clonez ce dépôt :
 
    ```bash
-   git clone <URL_DU_DEPOT>
+   git clone https://github.com/NikXpro/github_stats.git
    ```
 
 2. Accédez au répertoire du projet :
